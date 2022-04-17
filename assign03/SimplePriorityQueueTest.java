@@ -1,6 +1,6 @@
 package assign03;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import java.util.NoSuchElementException;
 import java.awt.Rectangle;
@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 import assign02.CS2420ClassGeneric;
 import assign02.MailingAddress;
@@ -29,7 +29,7 @@ class SimplePriorityQueueTest {
 	private SimplePriorityQueue<Rectangle> smallRectangleQueue;
 	private SimplePriorityQueue<Rectangle> largeRectangleQueue;
 	
-	@BeforeEach
+	@Before
 	void setUp() throws Exception {
 		emptyStringQueue = new SimplePriorityQueue<String>();
 		emptyIntegerQueue = new SimplePriorityQueue<Integer>();

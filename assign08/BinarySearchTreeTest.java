@@ -1,14 +1,14 @@
 package assign08;
 
+import static org.junit.Assert.*;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 class BinarySearchTreeTest {
 	BinarySearchTree<Integer> smallTest;
@@ -16,7 +16,7 @@ class BinarySearchTreeTest {
 	ArrayList<Integer> list;
 	Random rng = new Random();
 
-	@BeforeEach
+	@Before
 	void setUp() {
 		smallTest = new BinarySearchTree<Integer>();
 		smallTest.add(20);

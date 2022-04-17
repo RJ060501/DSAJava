@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * This class tests the GraphUtility class.
@@ -31,7 +31,7 @@ class GraphTest {
 	List<String> cyclicSources;
 	List<String> cyclicDestinations;
 
-	@BeforeEach
+	@Before
 	void setUp() {
 		sample = new Graph<String>();
 		sample.addEdge("a", "b");

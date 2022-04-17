@@ -1,10 +1,10 @@
 package assign01;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * This tester class assesses the correctness of the Vector class.
@@ -21,7 +21,7 @@ class MathVectorTester {
 	
 	private MathVector rowVec, rowVecTranspose, unitVec, sumVec, colVec, otherUnitVec, colVecTranspose, otherSumVec;
 
-	@BeforeEach
+	@Before
 	void setUp() throws Exception {
 		// Creates a row vector with three elements: 3.0, 1.0, 2.0
 		rowVec = new MathVector(new double[][]{{3, 1, 2}});
@@ -48,7 +48,7 @@ class MathVectorTester {
 		colVec = new MathVector(new double[][]{{-11}, {2.5}, {36}, {-3.14}, {7.1}});		
 	}
 
-	@AfterEach
+	@After
 	void tearDown() throws Exception {
 	}
 	

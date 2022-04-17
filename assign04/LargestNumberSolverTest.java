@@ -9,7 +9,7 @@ package assign04;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.*;
 
 import java.awt.Rectangle;
 import java.math.BigInteger;
@@ -18,8 +18,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 class LargestNumberSolverTest {
 
@@ -31,7 +31,7 @@ class LargestNumberSolverTest {
 	private List<Integer[]> inBoundsList;
 	private List<Rectangle[]> rectangleList;
 
-	@BeforeEach
+	@Before
 	void setUp() throws Exception {
 		emptyArray = new Integer[0];
 		smallArray = new Integer[] { 11, 2, 32, 44, 22 };

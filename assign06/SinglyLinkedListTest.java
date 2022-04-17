@@ -1,26 +1,26 @@
 package assign06;
 
+import static org.junit.Assert.*;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 class SinglyLinkedListTest {
 
 	private SinglyLinkedList<Integer> smallIntegerList;
 	private SinglyLinkedList<Integer> mediumIntegerList;
 
-	@BeforeEach
+	@Before
 	public void setUp() {
 		// System.out.println("setUp");
 		smallIntegerList = new SinglyLinkedList<Integer>();

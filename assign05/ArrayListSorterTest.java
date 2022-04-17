@@ -1,17 +1,14 @@
 
 package assign05;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-\
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * This class tests the method in the ArrayListSorter class
@@ -41,7 +38,7 @@ class ArrayListSorterTest {
 	private ArrayList<Integer> generatePermutedSmall;
 	Random rnd;
 
-	@BeforeEach
+	@Before
 	void setUp() throws Exception {
 		emptyArray = new ArrayList<Integer>(5);
 
