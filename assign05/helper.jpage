@@ -1,0 +1,43 @@
+//	// STRATEGY 1:
+//	/**
+//	 * Represents first and last item in array in given iteration
+//	 * @param <T> generic type being used
+//	 * @param a - the generic array being sorted
+//	 */
+	private static <T> int partition(ArrayList<T> arr, int low, int high) {
+		if (low >= high) {
+			return 0;
+		}
+		// Use the middle item as the pivot
+		// Round down and return whole number if needed
+		Integer pivotIndex = (low + high) / 2;
+
+		// SWAP pivot with last item (Could make private helper function)
+		arr[pivotIndex] = arr[high];
+		arr[high] = arr[pivotIndex];
+		
+		// Consider all the other items and compare them with the pivot
+		for(int i = 0; low < high; i++) {
+			if (arr[i] <= arr[high]) {
+				// SWAP low index and i index values - set aside items we considered already...
+				// May need temporary place holder
+				arr[low] = arr[i];
+				a[i] = arr[low];
+				low = low + 1;
+			}
+		}
+		// We have considered all the items - we have to swap the pivot and the low
+		// Swap back the index first and the pivot, because the pivot is at the last position
+		a[low] = a[high];
+		a[high] = a[low];
+		
+		// Return index of the pivot.
+		return low;
+	}
+	
+//	T min = arr.get(leftCursor);
+//
+//	for(int i = leftCursor + 1; i <= endLeft; i++)
+//		if(min.compareTo(arr.get(i)) > 0)
+//			min = arr.get(i);
+//	storage.add(min);
